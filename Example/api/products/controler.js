@@ -25,7 +25,7 @@ module.exports = {
             res.json({message: 'Update success!'})
         })
     },
-    store: (req, res) => {
+    create: (req, res) => {
         let data = req.body;
         let sql = 'INSERT INTO products SET ?'
         db.query(sql, [data], (err, response) => {

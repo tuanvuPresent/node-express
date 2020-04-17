@@ -23,7 +23,7 @@ module.exports = {
                 id: id
             }
         });
-        res.json(todo)
+        res.json(todo[0])
     },
 
     update: async (req, res) => {
