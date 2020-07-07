@@ -5,7 +5,12 @@ const User = model.user
 const bcrypt = require('bcrypt')
 
 const isAuth = async (req, res, next) => {
-    let auth = req.header('Authorization').split(' ')
+    let auth = req.headers.authorization
+    if (auth) {
+        auth = auth.split(' ')
+    } else {
+        res.status(401).send({error: 'Not authorized to access this resource'})
+    }
 
     if (auth.length !== 2 || auth[0] !== key) {
         return res.status(401).send({error: 'wrong format token'})
