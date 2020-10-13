@@ -23,7 +23,7 @@
     "mysql2": "^2.1.0",
     "sequelize": "^5.21.6",
     "sequelize-auto-migrations": "^1.0.3",
-    "pg": "^8.0.3",
+    "pg": "*",
     "jsonwebtoken": "^8.5.1"
   }
 }
