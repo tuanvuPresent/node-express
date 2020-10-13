@@ -24,6 +24,6 @@
     "sequelize": "^5.21.6",
     "sequelize-auto-migrations": "^1.0.3",
     "pg": "*",
-    "jsonwebtoken":"*",
+    "jsonwebtoken": "*"
   }
 }
