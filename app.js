@@ -7,8 +7,8 @@ app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
 
 //router
-// const routes = require('./api/router');
-// app.use('', routes);
+const routes = require('./api/router');
+app.use('', routes);
 
 //handle error
 app.use(function (req, res) {
