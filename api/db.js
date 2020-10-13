@@ -17,10 +17,9 @@ const mysql = require('mysql');
 // })
 // posgres
 const { Pool, Client } = require('pg')
-const connectionString = process.env.DATABASE_URL
-const db = new Pool({
-  connectionString: connectionString,
-})
+var pg = require('pg');
+var conString = process.env.DATABASE_URL
+const db = new pg.Client(conString);
 db.connect(err => {
     if (err) {
         console.log(err);
