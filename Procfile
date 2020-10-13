@@ -1,1 +1,2 @@
-web: sequelize db:migrate;node app.js
+release: sequelize db:migrate
+web: node app.js
