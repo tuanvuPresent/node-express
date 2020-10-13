@@ -21,4 +21,9 @@ const connectionString = process.env.DATABASE_URL
 const db = new Pool({
   connectionString: connectionString,
 })
+db.connect(err => {
+    if (err) {
+        console.log(err);
+    }
+})
 module.exports = db;
