@@ -3,7 +3,7 @@ const db = require('../db')
 
 module.exports = {
     get: (req, res) => {
-        let sql = 'SELECT * FROM products'
+        let sql = "SELECT * FROM products"
         db.query(sql, (err, response) => {
             if (err) res.json(err)
             res.json(response)
